@@ -1,6 +1,7 @@
 import httpx
 from rich import print
 from statistics import mean
+total = 0
 
 def human_format(num):
     if num > 5000:
