@@ -1,7 +1,7 @@
 import httpx
 from rich import print
 from statistics import mean
-
+followers,res,user_info,data,profile_pic_url,posts,num,like,coment,comments_c,likes_c,likes,comments = 0,0,0,0,0,0,0,0,0,0,0,0,0
 def human_format(num):
     if num > 5000:
         magnitude = 0
