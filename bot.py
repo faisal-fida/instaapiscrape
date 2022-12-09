@@ -1,7 +1,7 @@
 import httpx
 from rich import print
 from statistics import mean
-followers,res,user_info,data,profile_pic_url,posts,num,like,coment,comments_c,likes_c,likes,comments = 0,0,0,0,0,0,0,0,0,0,0,0,0
+followers,res,user_info,data,profile_pic_url,posts,num,like,coment,comments_c,likes_c,likes,comments,total = 0,0,0,0,0,0,0,0,0,0,0,0,0,0
 def human_format(num):
     if num > 5000:
         magnitude = 0
@@ -13,8 +13,7 @@ def human_format(num):
         return num
 
 async def get_userDetail(username):
-    global followers,res,user_info,data,profile_pic_url,posts,num,like,coment,comments_c,likes_c,likes,comments
-    global total
+    global followers,res,user_info,data,profile_pic_url,posts,num,like,coment,comments_c,likes_c,likes,comments,total
     headers = {'user-agent':'Mozilla/5.0 (iPhone; CPU iPhone OS 12_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Instagram 105.0.0.11.118 (iPhone11,8; iOS 12_3_1; en_US; en-US; scale=2.00; 828x1792; 165586599)'}
     base_url = f"https://i.instagram.com/api/v1/users/web_profile_info/?username={username}"
     comments,likes = [],[]
